@@ -155,8 +155,9 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 /* Wax seal */
 .env__seal {
     position:absolute;
-    left:50%; top:52%;
-    transform:translate(-50%, -50%);
+    left:0; right:0; top:52%;
+    transform:translateY(-50%);
+    margin:0 auto;
     z-index:10;
     width:var(--seal-size);
     visibility:hidden;
