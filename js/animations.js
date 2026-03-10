@@ -53,10 +53,14 @@
     var shell = document.getElementById('env-shell');
     var seal = document.getElementById('env-seal');
     if (shell && seal) {
+        var sealReady = false;
         new ResizeObserver(function (entries) {
             var h = entries[0].contentRect.height;
             seal.style.setProperty('--seal-size', (h * 0.25) + 'px');
-            seal.style.visibility = 'visible';
+            if (!sealReady) {
+                sealReady = true;
+                gsap.to(seal, { opacity: 1, duration: 0.4, delay: 0.1 });
+            }
         }).observe(shell);
     }
 
