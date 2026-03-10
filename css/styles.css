@@ -155,8 +155,8 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 /* Wax seal */
 .env__seal {
     position:absolute;
-    left:50%; top:52%;
-    transform:translate(-50%, -50%);
+    left:calc(50% - var(--seal-size, 0px) / 2);
+    top:calc(52% - var(--seal-size, 0px) / 2);
     z-index:10;
     width:var(--seal-size);
     visibility:hidden;
@@ -196,10 +196,10 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 
 /* Scroll hint */
 .env__hint {
-    position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
+    position:absolute; bottom:2rem; left:0; right:0;
     display:flex; flex-direction:column; align-items:center; gap:.5rem;
     font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
-    color:var(--ink); z-index:20;
+    color:var(--ink); z-index:20; text-align:center;
 }
 .env__hint svg { animation:float 2.5s ease-in-out infinite }
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
