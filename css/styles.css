@@ -176,6 +176,17 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
     color:rgba(55,38,8,.5); letter-spacing:.12em;
     text-shadow:0 1px 2px rgba(255,230,160,.35);
     pointer-events:none;
+    padding-top:.15em; padding-right:.25em;
+}
+.seal-a {
+    font-family:'Playfair Display',serif;
+    font-weight:400; font-style:italic;
+}
+.seal-b {
+    font-family:'Great Vibes',cursive;
+    font-weight:400; letter-spacing:0;
+    font-size:.88em;
+    position:relative; top:.18em;
 }
 .env__seal-text em {
     font-style:italic; font-weight:400;
@@ -202,11 +213,6 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 }
 
 .hero__inner { position:relative; z-index:2 }
-
-.hero__overtitle {
-    font-size:0.85rem; letter-spacing:.3em; text-transform:uppercase;
-    color:var(--ink-lt); margin-bottom:2rem;
-}
 
 .hero__title {
     display:flex; flex-direction:column; align-items:center;
@@ -276,6 +282,13 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 
 /* DETAILS */
 
+/* Story photo */
+.story__photo {
+    width:min(280px, 60%);
+    margin-top:1.5rem;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
 .details { background:var(--off-white) }
 
 .countdown {
@@ -320,6 +333,13 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 .info-card h3 { font-size:1.25rem; margin-bottom:.4rem; color:var(--gold-dk) }
 .info-card p { font-size:.95rem }
 .info-card span { font-size:.82rem; color:var(--ink-lt); display:block; margin-top:.25rem }
+.info-card__map {
+    display:inline-block; margin-top:.6rem;
+    font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-dk); border-bottom:1px solid rgba(201,168,76,.3);
+    transition:border-color .3s;
+}
+.info-card__map:hover { border-color:var(--gold) }
 
 
 /* TIMELINE */
@@ -461,6 +481,12 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
     transition:background .3s, color .3s;
 }
 .rsvp-btn:hover { background:var(--gold); color:var(--white) }
+
+.rsvp__note {
+    text-align:center; max-width:480px; margin:2.5rem auto 0;
+    font-size:.85rem; color:var(--ink-lt); line-height:1.7;
+    font-style:italic;
+}
 
 .rsvp-ok { text-align:center; max-width:360px; margin:0 auto }
 .rsvp-ok h3 { font-size:1.6rem; margin:.8rem 0 .4rem; color:var(--gold-dk) }

@@ -1,8 +1,8 @@
-/* Countdown — Sept 20 2026, 16:00 Lisbon */
+/* Countdown — Jul 17 2027, 16:00 Lisbon */
 (function () {
     'use strict';
 
-    var wedding = new Date('2026-09-20T16:00:00+01:00');
+    var wedding = new Date('2027-07-17T16:00:00+01:00');
     var els = {
         d: document.getElementById('cd-days'),
         h: document.getElementById('cd-hours'),

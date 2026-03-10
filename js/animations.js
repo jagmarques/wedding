@@ -110,7 +110,7 @@
         duration: 1.4, ease: 'elastic.out(1, 0.5)',
     });
 
-    ['.hero__overtitle', '.hero__undertitle', '.hero__date'].forEach(function (sel) {
+    ['.hero__undertitle', '.hero__date'].forEach(function (sel) {
         reveal(sel, { y: 20 * m, opacity: 0, duration: 1 }, sel, 'top 90%');
     });
 
@@ -157,39 +157,6 @@
         y: 40 * m, opacity: 0, scale: 0.94,
         duration: 1, stagger: mobile ? 0.08 : 0.15,
     }, '.info-grid', 'top 80%');
-
-
-    /* TIMELINE */
-    var prog = document.querySelector('.timeline__progress');
-    if (prog) {
-        gsap.to(prog, {
-            height: '100%', ease: 'none',
-            scrollTrigger: {
-                trigger: '.timeline',
-                start: 'top 55%',
-                end: 'bottom 45%',
-                scrub: 0.5,
-            },
-        });
-    }
-
-    document.querySelectorAll('.timeline__item').forEach(function (item) {
-        var isLeft = item.classList.contains('timeline__item--left');
-        reveal(item, {
-            x: mobile ? -30 : (isLeft ? -60 : 60), opacity: 0, duration: 1.1,
-        });
-    });
-
-    document.querySelectorAll('.timeline__dot').forEach(function (d) {
-        reveal(d, { scale: 0, duration: 0.7, ease: 'elastic.out(1, 0.4)' }, d, 'top 84%');
-    });
-
-
-    /* GALLERY */
-    reveal('.gallery__item', {
-        y: 30 * m, opacity: 0, scale: 0.92,
-        duration: 0.9, stagger: mobile ? 0.06 : 0.1,
-    }, '.gallery', 'top 78%');
 
 
     /* RSVP */
@@ -244,35 +211,5 @@
         topBtn.addEventListener('click', function () { lenis.scrollTo(0); });
     }
 
-
-    /* LIGHTBOX */
-    var lb = document.getElementById('lightbox');
-    if (lb) {
-        var lbCap = lb.querySelector('.lightbox__cap');
-        var lbX = lb.querySelector('.lightbox__x');
-
-        document.querySelectorAll('.gallery__item').forEach(function (item) {
-            item.addEventListener('click', function () {
-                lbCap.textContent = this.dataset.caption || '';
-                lb.hidden = false;
-                requestAnimationFrame(function () { lb.classList.add('active'); });
-                lenis.stop();
-            });
-        });
-
-        function closeLightbox() {
-            lb.classList.remove('active');
-            setTimeout(function () { lb.hidden = true; }, 400);
-            lenis.start();
-        }
-
-        lbX.addEventListener('click', closeLightbox);
-        lb.addEventListener('click', function (e) {
-            if (e.target === lb) closeLightbox();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && lb.classList.contains('active')) closeLightbox();
-        });
-    }
 
 })();
