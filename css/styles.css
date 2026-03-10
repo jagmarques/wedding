@@ -163,9 +163,6 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
 .env__seal-img {
     display:block; width:100%; height:auto;
     pointer-events:none;
-    filter:
-        drop-shadow(0 4px 8px rgba(80,60,20,.5))
-        drop-shadow(0 8px 20px rgba(0,0,0,.2));
 }
 .env__seal-text {
     position:absolute; inset:0;
