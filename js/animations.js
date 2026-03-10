@@ -59,7 +59,7 @@
             seal.style.setProperty('--seal-size', (h * 0.25) + 'px');
             if (!sealReady) {
                 sealReady = true;
-                gsap.to(seal, { opacity: 1, duration: 0.4, delay: 0.1 });
+                gsap.set(seal, { opacity: 1 });
             }
         }).observe(shell);
     }
@@ -80,7 +80,9 @@
 
     envTl.to('.env__hint', { opacity: 0, y: 10, duration: 0.05 }, 0);
 
-    envTl.to('.env__seal', {
+    envTl.fromTo('.env__seal', {
+        scale: 1, opacity: 1,
+    }, {
         scale: mobile ? 7 : 5, opacity: 0,
         duration: mobile ? 0.35 : 0.50, ease: 'power2.inOut',
     }, 0.02);
