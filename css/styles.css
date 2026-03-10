@@ -548,7 +548,6 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
     .section__heading { font-size:1.6rem; margin-bottom:1.5rem }
 
     .env { height:110vh }
-    .env__shell { aspect-ratio:auto; width:100%; height:100% }
     .env__hint { font-size:.6rem; bottom:1.5rem }
 
     .hero { min-height:auto; padding:10vh 0 4rem }
