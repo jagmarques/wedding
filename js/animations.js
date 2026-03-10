@@ -77,7 +77,7 @@
     envTl.to('.env__hint', { opacity: 0, y: 10, duration: 0.05 }, 0);
 
     envTl.to('.env__seal', {
-        scale: mobile ? 2 : 3, opacity: 0,
+        scale: mobile ? 4 : 5, opacity: 0,
         duration: mobile ? 0.35 : 0.50, ease: 'power2.inOut',
     }, 0.02);
 
