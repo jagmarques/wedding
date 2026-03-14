@@ -56,7 +56,8 @@
         var sealReady = false;
         new ResizeObserver(function (entries) {
             var h = entries[0].contentRect.height;
-            seal.style.setProperty('--seal-size', (h * 0.25) + 'px');
+            var sealRatio = mobile ? 0.35 : 0.25;
+            seal.style.setProperty('--seal-size', (h * sealRatio) + 'px');
             if (!sealReady) {
                 sealReady = true;
                 gsap.set(seal, { opacity: 1 });

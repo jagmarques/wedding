@@ -554,6 +554,13 @@ button { cursor:pointer; border:none; background:none; font:inherit; color:inher
     .env { height:110vh }
     .env__hint { font-size:.6rem; bottom:1.5rem }
 
+    .env__shell {
+        height: 72vh;
+        width: calc(72vh * 1.45);
+        max-width: none;
+        max-height: none;
+    }
+
     .hero { min-height:auto; padding:10vh 0 4rem }
     .hero__name { font-size:2.8rem }
     .hero__amp { font-size:1.4rem }
